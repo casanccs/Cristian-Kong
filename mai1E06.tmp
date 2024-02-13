@@ -1,0 +1,824 @@
+[gd_scene load_steps=21 format=3 uid="uid://baa1a8qbucyuc"]
+
+[ext_resource type="Texture2D" uid="uid://cjch8ngr68lgy" path="res://floor.png" id="1_60x5e"]
+[ext_resource type="Script" path="res://main.gd" id="1_b8rju"]
+[ext_resource type="Texture2D" uid="uid://btj8w28nc7wvx" path="res://ladder.png" id="2_lcnn0"]
+[ext_resource type="Script" path="res://Area.gd" id="3_0b16s"]
+[ext_resource type="Texture2D" uid="uid://4nn8tpa6elpc" path="res://Flower.png" id="3_y80wd"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="4_6iouv"]
+[ext_resource type="Script" path="res://Enemies.gd" id="7_uclln"]
+[ext_resource type="Texture2D" uid="uid://cewv1yxs6orx3" path="res://lips.png" id="7_ulp0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqixu"]
+size = Vector2(281, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v01ol"]
+size = Vector2(335, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjsks"]
+size = Vector2(554.399, 35.6465)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsg4y"]
+size = Vector2(491.424, 34.7579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve5g8"]
+size = Vector2(496.35, 34.7579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy7py"]
+size = Vector2(563.637, 34.7579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5fgo"]
+size = Vector2(558.5, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkqd"]
+size = Vector2(38, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydi8e"]
+size = Vector2(38, 57.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvwi2"]
+size = Vector2(36.5789, 40.8824)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cme1o"]
+size = Vector2(41.5709, 38.6901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8aaw"]
+size = Vector2(31, 48)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_b8rju")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 601.0
+offset_bottom = 804.0
+color = Color(0.0313726, 0, 0.262745, 1)
+
+[node name="Platorm" type="ColorRect" parent="."]
+offset_left = 217.0
+offset_top = 46.0
+offset_right = 257.0
+offset_bottom = 86.0
+scale = Vector2(1.39646, 0.168062)
+color = Color(0.662745, 0, 0.12549, 1)
+
+[node name="Floors" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Floors"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.00001
+offset_top = 750.0
+offset_right = 43.0
+offset_bottom = 790.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect2" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 73.0
+offset_top = 750.0
+offset_right = 113.0
+offset_bottom = 790.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect3" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 143.0
+offset_top = 750.0
+offset_right = 183.0
+offset_bottom = 790.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect4" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 213.0
+offset_top = 750.0
+offset_right = 253.0
+offset_bottom = 790.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect5" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 283.0
+offset_top = 748.0
+offset_right = 323.0
+offset_bottom = 788.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect6" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 353.0
+offset_top = 746.0
+offset_right = 393.0
+offset_bottom = 786.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect7" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 423.0
+offset_top = 744.0
+offset_right = 463.0
+offset_bottom = 784.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect8" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 494.0
+offset_top = 741.0
+offset_right = 534.0
+offset_bottom = 781.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect9" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 564.0
+offset_top = 739.0
+offset_right = 604.0
+offset_bottom = 779.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect10" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 478.0
+offset_top = 632.0
+offset_right = 518.0
+offset_bottom = 672.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect11" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 408.0
+offset_top = 627.0
+offset_right = 448.0
+offset_bottom = 667.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect12" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 338.0
+offset_top = 622.0
+offset_right = 378.0
+offset_bottom = 662.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect13" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 268.0
+offset_top = 618.0
+offset_right = 308.0
+offset_bottom = 658.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect14" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 198.0
+offset_top = 613.0
+offset_right = 238.0
+offset_bottom = 653.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect15" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 128.0
+offset_top = 608.0
+offset_right = 168.0
+offset_bottom = 648.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect16" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 60.0
+offset_top = 604.0
+offset_right = 100.0
+offset_bottom = 644.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect17" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = -8.0
+offset_top = 599.0
+offset_right = 32.0
+offset_bottom = 639.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect18" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 493.0
+offset_right = 112.0
+offset_bottom = 533.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect19" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 142.0
+offset_top = 486.0
+offset_right = 182.0
+offset_bottom = 526.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect20" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 212.0
+offset_top = 482.0
+offset_right = 252.0
+offset_bottom = 522.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect21" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 282.0
+offset_top = 477.0
+offset_right = 322.0
+offset_bottom = 517.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect22" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 352.0
+offset_top = 472.0
+offset_right = 392.0
+offset_bottom = 512.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect23" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 422.0
+offset_top = 467.0
+offset_right = 462.0
+offset_bottom = 507.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect24" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 492.0
+offset_top = 462.0
+offset_right = 532.0
+offset_bottom = 502.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect25" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 424.0
+offset_top = 358.0
+offset_right = 464.0
+offset_bottom = 398.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect26" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 355.0
+offset_top = 354.0
+offset_right = 395.0
+offset_bottom = 394.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect27" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 286.0
+offset_top = 350.0
+offset_right = 326.0
+offset_bottom = 390.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect28" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 217.0
+offset_top = 345.0
+offset_right = 257.0
+offset_bottom = 385.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect29" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 148.0
+offset_top = 340.0
+offset_right = 188.0
+offset_bottom = 380.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect30" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 78.0
+offset_top = 335.0
+offset_right = 118.0
+offset_bottom = 375.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect31" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 8.00001
+offset_top = 331.0
+offset_right = 48.0001
+offset_bottom = 371.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect32" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = -61.0
+offset_top = 327.0
+offset_right = -20.9999
+offset_bottom = 367.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect33" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 221.0
+offset_right = 77.0001
+offset_bottom = 261.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect34" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 107.0
+offset_top = 218.0
+offset_right = 147.0
+offset_bottom = 258.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect35" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 177.0
+offset_top = 215.0
+offset_right = 217.0
+offset_bottom = 255.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect36" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 247.0
+offset_top = 212.0
+offset_right = 287.0
+offset_bottom = 252.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect37" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 317.0
+offset_top = 210.0
+offset_right = 357.0
+offset_bottom = 250.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect38" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 387.0
+offset_top = 207.0
+offset_right = 427.0
+offset_bottom = 247.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect39" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 457.0
+offset_top = 205.0
+offset_right = 497.0
+offset_bottom = 245.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect40" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 527.0
+offset_top = 202.0
+offset_right = 567.0
+offset_bottom = 242.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect41" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 454.0
+offset_top = 94.0
+offset_right = 494.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect42" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 385.0
+offset_top = 94.0
+offset_right = 425.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect43" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 315.0
+offset_top = 94.0
+offset_right = 355.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect44" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 246.0
+offset_top = 94.0
+offset_right = 286.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect45" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 176.0
+offset_top = 94.0
+offset_right = 216.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect46" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 106.0
+offset_top = 94.0
+offset_right = 146.0
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect47" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = 36.0
+offset_top = 94.0
+offset_right = 76.0001
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="TextureRect48" type="TextureRect" parent="Floors"]
+texture_filter = 1
+offset_left = -34.0
+offset_top = 94.0
+offset_right = 6.00006
+offset_bottom = 134.0
+scale = Vector2(1.76, 0.76)
+texture = ExtResource("1_60x5e")
+
+[node name="Ladders" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 498.0
+offset_top = 701.0
+offset_right = 538.0
+offset_bottom = 741.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect2" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 498.0
+offset_top = 662.0
+offset_right = 538.0
+offset_bottom = 702.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect3" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 83.0
+offset_top = 564.0
+offset_right = 123.0
+offset_bottom = 604.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect4" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 83.0
+offset_top = 524.0
+offset_right = 123.0
+offset_bottom = 564.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect5" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 446.0
+offset_top = 428.0
+offset_right = 486.0
+offset_bottom = 468.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect6" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 446.0
+offset_top = 388.0
+offset_right = 486.0
+offset_bottom = 428.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect7" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 291.0
+offset_right = 77.0
+offset_bottom = 331.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect8" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 251.0
+offset_right = 77.0
+offset_bottom = 291.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect9" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 165.0
+offset_right = 522.0
+offset_bottom = 205.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect10" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 125.0
+offset_right = 522.0
+offset_bottom = 165.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect11" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 225.0
+offset_top = 53.0
+offset_right = 265.0
+offset_bottom = 93.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect12" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 498.0
+offset_top = 623.0
+offset_right = 538.0
+offset_bottom = 663.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect13" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 498.0
+offset_top = 583.0
+offset_right = 538.0
+offset_bottom = 623.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect14" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 83.0
+offset_top = 485.0
+offset_right = 123.0
+offset_bottom = 525.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect15" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 83.0
+offset_top = 446.0
+offset_right = 123.0
+offset_bottom = 486.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect16" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 446.0
+offset_top = 349.0
+offset_right = 486.0
+offset_bottom = 389.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect17" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 446.0
+offset_top = 309.0
+offset_right = 486.0
+offset_bottom = 349.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect18" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 212.0
+offset_right = 77.0
+offset_bottom = 252.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect19" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 172.0
+offset_right = 77.0
+offset_bottom = 212.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect20" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 85.0
+offset_right = 522.0
+offset_bottom = 125.0
+texture = ExtResource("2_lcnn0")
+
+[node name="TextureRect21" type="TextureRect" parent="Ladders"]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 45.0
+offset_right = 522.0
+offset_bottom = 85.0
+texture = ExtResource("2_lcnn0")
+
+[node name="Floor Body" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor Body"]
+position = Vector2(4, 754)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(137.5, 12)
+shape = SubResource("RectangleShape2D_dqixu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(407, 8)
+rotation = -0.033382
+shape = SubResource("RectangleShape2D_v01ol")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(267.95, -123.596)
+rotation = 0.0679656
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mjsks")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(314.208, -262.437)
+rotation = -0.070694
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_bsg4y")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(243.542, -394.156)
+rotation = 0.0632525
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ve5g8")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(314.081, -527.358)
+rotation = -0.0376138
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_uy7py")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Floor Body/StaticBody2D"]
+position = Vector2(241.25, -646)
+shape = SubResource("RectangleShape2D_s5fgo")
+
+[node name="Ladder Body" type="Node2D" parent="."]
+
+[node name="Area" type="Area2D" parent="Ladder Body" groups=["ladders"]]
+collision_layer = 4
+script = ExtResource("3_0b16s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(518, 656)
+shape = SubResource("RectangleShape2D_uqkqd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(102, 521)
+shape = SubResource("RectangleShape2D_uqkqd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(466, 384)
+shape = SubResource("RectangleShape2D_uqkqd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(58, 248)
+shape = SubResource("RectangleShape2D_uqkqd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(502, 123)
+shape = SubResource("RectangleShape2D_uqkqd")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ladder Body/Area"]
+position = Vector2(245, 62.75)
+shape = SubResource("RectangleShape2D_ydi8e")
+
+[node name="Flower" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 233.0
+offset_top = 18.0
+offset_right = 273.0
+offset_bottom = 58.0
+scale = Vector2(0.760001, 0.68)
+texture = ExtResource("3_y80wd")
+
+[node name="Area2D" type="Area2D" parent="Flower"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flower/Area2D"]
+position = Vector2(15.7895, 20.5882)
+shape = SubResource("RectangleShape2D_gvwi2")
+
+[node name="Me" type="ColorRect" parent="."]
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 66.0
+offset_bottom = 62.0
+scale = Vector2(1.86881, 1.79578)
+color = Color(0.580392, 0.286275, 0.188235, 1)
+
+[node name="Area2D" type="Area2D" parent="Me"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Me/Area2D"]
+position = Vector2(20.3338, 19.9019)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cme1o")
+
+[node name="Britney" type="CharacterBody2D" parent="."]
+position = Vector2(32, 696)
+collision_mask = 30
+script = ExtResource("4_6iouv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Britney"]
+position = Vector2(-1, -11)
+scale = Vector2(1, 0.693644)
+shape = SubResource("RectangleShape2D_s8aaw")
+
+[node name="ColorRect" type="ColorRect" parent="Britney"]
+offset_left = -17.0
+offset_top = -30.0
+offset_right = 23.0
+offset_bottom = 10.0
+scale = Vector2(0.80001, 0.893913)
+
+[node name="Enemies" type="CharacterBody2D" parent="."]
+script = ExtResource("7_uclln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies"]
+
+[node name="TextureRect" type="TextureRect" parent="Enemies"]
+texture_filter = 1
+offset_left = 187.0
+offset_top = -39.0
+offset_right = 227.0
+offset_bottom = 1.00003
+scale = Vector2(1.45312, 0.621139)
+texture = ExtResource("7_ulp0f")
+
+[node name="lipSpawner" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="area_entered" from="Ladder Body/Area" to="Ladder Body/Area" method="_on_area_entered"]
+[connection signal="body_entered" from="Ladder Body/Area" to="Britney" method="_on_area_body_entered"]
+[connection signal="body_exited" from="Ladder Body/Area" to="Britney" method="_on_area_body_exited"]
+[connection signal="body_entered" from="Flower/Area2D" to="Britney" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="lipSpawner" to="." method="_on_lip_spawner_timeout"]
