@@ -42,7 +42,11 @@ func _on_area_body_exited(body):
 	on_ladder = false
 	set_collision_mask_value(2, true)
 
+func _on_enemies_2_body_entered(body):
+	get_tree().quit()
+
 
 func _on_area_2d_body_entered(body):
 	print("You Win!")
 	
+
